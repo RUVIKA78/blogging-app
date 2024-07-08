@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head")%>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Page</title>
+</head>
+
+<body>
+
+    <%- include('./partials/navbar')%>
+
+        <div class="d-flex justify-content-center align-items-center mt-4 p-4 flex-column">
+            <h1 class="pt-3">
+                <%= blog.title %>
+            </h1>
+            <img class="pt-3" width="700px" height="100%" src="/<%= blog.blogImage %>" alt="blogImg">
+            <pre class="pt-5 "><h3><%= blog.body %></h3></pre>
+        </div>
+        <div class="container mt-4">
+        </div>
+
+        <%- include("./partials/script")%>
+
+</body>
+
+</html>

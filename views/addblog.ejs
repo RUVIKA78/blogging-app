@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head")%>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Blog</title>
+</head>
+
+<body>
+
+    <%- include('./partials/navbar')%>
+        <div class="m-5 container d-flex gap-3 flex-column">
+            <form action="/blog" method="POST" enctype="multipart/form-data">
+
+                <div>
+                    <label for="coverimg">Cover Image</label>
+                    <input class="form-control" type="file" name="blogImage">
+                </div>
+                <div>
+                    <label for="title">Title</label>
+                    <input class="form-control" type="text" name="title">
+                </div>
+
+                <div>
+                    <label for="title">Write here</label>
+                    <textarea class="form-control" name="body" id="body"></textarea>
+                </div>
+
+                <div> <button class="btn btn-primary" class="form-control" type="submit">Publish</button>
+                </div>
+            </form>
+        </div>
+        <%- include("./partials/script")%>
+
+</body>
+
+</html>
